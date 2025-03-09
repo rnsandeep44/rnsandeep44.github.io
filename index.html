@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naga Sandeep Ramachandruni - Computer Vision & Deep Learning</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header styling */
+        header {
+            background-color: #3a5199;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav li a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        nav li a:hover {
+            background-color: #f0f0f0;
+            color: #3a5199;
+        }
+        
+        /* About section */
+        .about {
+            background-color: white;
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Experience section */
+        .experience {
+            margin: 30px 0;
+        }
+        
+        .job {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job h3 {
+            margin-top: 0;
+            color: #3a5199;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .job-date {
+            color: #666;
+        }
+        
+        .job-company {
+            font-style: italic;
+            margin: 5px 0;
+        }
+        
+        .job-location {
+            color: #666;
+            margin: 5px 0 15px;
+        }
+        
+        /* Projects section */
+        .projects {
+            margin: 30px 0;
+        }
+        
+        .project {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project h3 {
+            margin-top: 0;
+            color: #3a5199;
+        }
+        
+        /* Publications section */
+        .publications {
+            margin: 30px 0;
+        }
+        
+        .publication {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Contact section */
+        .contact {
+            text-align: center;
+            margin: 30px 0;
+            background-color: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #3a5199;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Skills section */
+        .skills {
+            margin: 30px 0;
+        }
+        
+        .skills-container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-category {
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h3 {
+            color: #3a5199;
+            margin-top: 0;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .skill-item {
+            background-color: #f0f4ff;
+            color: #3a5199;
+            padding: 5px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Education section */
+        .education {
+            margin: 30px 0;
+        }
+        
+        .education-item {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav li a {
+                text-align: center;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 30px 0;
+            }
+            
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="images/profile.jpg" alt="Naga Sandeep Ramachandruni" class="profile-pic">
+        <h1>Naga Sandeep Ramachandruni</h1>
+        <p class="tagline">Computer Vision Expert | Deep Learning Specialist | Tech Lead</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I'm an experienced and results-driven professional with a strong background in computer vision and deep learning. Currently based in Dallas, Texas, I specialize in solving complex problems in the fields of computer vision, machine learning, deep learning, generative AI, and image processing.</p>
+            
+            <p>With expertise across diverse domains including retail automation, customer support automation, tax compliance, automotive retail, skin care diagnostics, and social media analytics, I consistently deliver innovative solutions that drive business value.</p>
+            
+            <p>I'm passionate about pushing the boundaries of visual AI technologies and creating systems that make a real-world impact.</p>
+        </section>
+        
+        <section id="experience" class="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 class="job-title">Tech Lead (Computer Vision and Machine Learning)</h3>
+                    <span class="job-date">Sep 2024 - Present</span>
+                </div>
+                <p class="job-company">Sam's Club</p>
+                <p class="job-location">Dallas, Texas (Remote)</p>
+                <ul>
+                    <li>Solving the problem of person re-identification in Sam's Club stores</li>
+                    <li>Improved tracking and person re-identification accuracy using transformers-based models and optimization with Hungarian matching</li>
+                    <li>Leading the project in ideation, development, improvement, and deployment on edge devices</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 class="job-title">Tech Lead, Computer Vision</h3>
+                    <span class="job-date">Feb 2023 - Aug 2024</span>
+                </div>
+                <p class="job-company">Digit7.ai – Automated Checkout for Retail Store</p>
+                <p class="job-location">Dallas, Texas</p>
+                <ul>
+                    <li>Led a team of computer vision engineers in building retail automation for self-checkout</li>
+                    <li>Solved cross-hand and nearby customer resolution using pose estimation and person tracking</li>
+                    <li>Developed a multiprocessing framework to handle ~80 cameras and 140 IoT weight sensors</li>
+                    <li>Created an architecture using OCR, OpenAI CLIP, and transformer embeddings to improve product recognition</li>
+                    <li>Improved overall transaction accuracy from 60% to 95% with novel transformer-based architecture</li>
+                    <li>Deployed first completely automated checkout store in JuiceBabe - Downtown Dallas</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 class="job-title">Founding Machine Learning Engineer</h3>
+                    <span class="job-date">June 2021 - January 2023</span>
+                </div>
+                <p class="job-company">IrisAgent.com – Automated Customer Support Platform</p>
+                <p class="job-location">Bengaluru, India</p>
+                <ul>
+                    <li>Built AI platform to analyze customer support tickets and automate resolution, tagging, and routing</li>
+                    <li>Fine-tuned GPT2 models for different customer data to improve textual embeddings</li>
+                    <li>Trained models for similarity prediction with contrastive learning using BERT and XLM-ROBERTA</li>
+                    <li>Implemented hierarchical clustering of customer support tickets for categorizing without labels</li>
+                    <li>Enabled customers to speed up response times by 45%, reduce escalations by 60%, and achieve 35% automated responses</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 class="job-title">Senior Machine Learning Engineer</h3>
+                    <span class="job-date">June 2020 - June 2021</span>
+                </div>
+                <p class="job-company">AVALARA – Tax Compliance</p>
+                <p class="job-location">Bengaluru, India</p>
+                <ul>
+                    <li>Built a Deep learning Distil-BERT based hierarchical tax code classification system</li>
+                    <li>Achieved 92% accuracy through hierarchical information with soft labels and hierarchical losses</li>
+                    <li>Implemented identity verification on documents using OCR via document processing and face matching</li>
+                    <li>Received Star Performer Award for New Hire Category</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 class="job-title">Senior Data Scientist</h3>
+                    <span class="job-date">January 2020 - June 2020</span>
+                </div>
+                <p class="job-company">Tekion.com (Automotive Retail Cloud)</p>
+                <p class="job-location">Bengaluru, India</p>
+                <ul>
+                    <li>Improved the meanIOU of automated damage detection system using U-Net based segmentation model from 35% to 85%</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 class="job-title">Data Scientist</h3>
+                    <span class="job-date">June 2017 - January 2020</span>
+                </div>
+                <p class="job-company">CureSkin.com (Y Combinator 2017 batch) – Skin Care using Visual AI</p>
+                <p class="job-location">Bengaluru, India</p>
+                <ul>
+                    <li>Built a diagnostic system to automatically detect skin issues from mobile camera images</li>
+                    <li>Implemented facial landmark detection and background removal using segmentation approaches</li>
+                    <li>Developed skin issue detection model based on Mask-RCNN for tiny object detection</li>
+                    <li>Improved model performance from 0.1 to 0.55 MAP using higher resolution, FPN, custom anchor boxes, ROIAlign, and context</li>
+                    <li>The system is used by more than 2,000 users per day across India</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <h3 class="job-title">Machine Learning Engineer</h3>
+                    <span class="job-date">April 2015 - May 2017</span>
+                </div>
+                <p class="job-company">Sysomos - Social Media Analytics using AI</p>
+                <p class="job-location">Bengaluru, India</p>
+                <ul>
+                    <li>Built a visual analytics platform to detect objects, logos, scenes, and food items in social media images</li>
+                    <li>Fine-tuned Inception, VGG, and ImageNet for use in Fast-RCNN and Faster-RCNN for logo detection</li>
+                    <li>Processed half a million images and served 300 brands</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="projects" class="projects">
+            <h2>Selected Projects</h2>
+            
+            <div class="project">
+                <h3>Visual Integration of Person into Any Scene using Stable Diffusion</h3>
+                <p><strong>Technologies:</strong> Stable Diffusion, Depth Estimation, SegmentAnyThing</p>
+                <p>Built a system to integrate any person into any given scene by cutting the image of the person from the background into another scene using stable diffusion models and depth estimation models. The generative scene looks natural and coherent, with consistent scale, size, shadow, and lighting conditions.</p>
+                <p><a href="https://github.com/rnsandeep44/image-generation" target="_blank">Project Page</a></p>
+            </div>
+            
+            <div class="project">
+                <h3>Visual Question Answering using Mistral 7B LLM and OPEN VOCAB YOLO</h3>
+                <p><strong>Technologies:</strong> Mistral7B LLM, OpenYOLO, Transformers</p>
+                <p>Built a visual question answering system using Mistral 7B Language model and function calling Open Vocabulary YOLO. The system takes questions and images from users, analyzes the image, and answers questions relating to any object class using textual CLIP embeddings.</p>
+                <p><a href="https://gitlab.com/rnsandeep/onnx-yolo-world-with-mistral-llm" target="_blank">Project Page</a></p>
+            </div>
+            
+            <div class="project">
+                <h3>Advanced CVPR Publications Retrieval System Leveraging RAG</h3>
+                <p><strong>Technologies:</strong> RAG, Langchain, UnstructuredIO, Hugging Face, ChromaDB</p>
+                <p>Developed an advanced CVPR paper retrieval system integrating RAG for query expansion, Langchain for similarity search, and ChromaDB for efficient document storage. The system enables comprehensive and accurate retrieval of relevant CVPR papers, enhancing research accessibility and efficiency.</p>
+            </div>
+            
+            <div class="project">
+                <h3>Generative Adversarial Networks for Deblurring Images</h3>
+                <p><strong>Technologies:</strong> PyTorch, TorchVision, Inception-v3, GAN</p>
+                <p>Developed a GAN for deblurring images. The algorithm uses two networks: one takes the blurred image and produces a deblurred image, while the other discriminates between original and deblurred images.</p>
+                <p><a href="https://github.com/rnsandeep/deblur_gan" target="_blank">GitHub Repo</a></p>
+            </div>
+        </section>
+        
+        <section id="skills" class="skills">
+            <h2>Technical Skills</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming/Scripting</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">C</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">Scala</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Libraries & Frameworks</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">TensorFlow</span>
+                        <span class="skill-item">NumPy</span>
+                        <span class="skill-item">Caffe</span>
+                        <span class="skill-item">Keras</span>
+                        <span class="skill-item">Scikit-Learn</span>
+                        <span class="skill-item">Hugging Face</span>
+                        <span class="skill-item">PySpark</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">MATLAB</span>
+                        <span class="skill-item">OpenCV</span>
+                        <span class="skill-item">CUDA</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Redis</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">MLOps</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">AWS</span>
+                        <span class="skill-item">Google Cloud</span>
+                        <span class="skill-item">Azure</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Concepts</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Generative AI</span>
+                        <span class="skill-item">Large Language Models</span>
+                        <span class="skill-item">Transformers</span>
+                        <span class="skill-item">Attention Networks</span>
+                        <span class="skill-item">Deep Learning</span>
+                        <span class="skill-item">Image Classification</span>
+                        <span class="skill-item">Object Detection (YOLO)</span>
+                        <span class="skill-item">Semantic Segmentation</span>
+                        <span class="skill-item">GANs</span>
+                        <span class="skill-item">Face Detection</span>
+                        <span class="skill-item">Neural Networks</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="publications" class="publications">
+            <h2>Publications</h2>
+            
+            <div class="publication">
+                <h3>Relative Parts: Distinctive Parts for Learning Relative Attributes</h3>
+                <p><strong>Conference:</strong> IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2014</p>
+                <p><strong>Authors:</strong> Naga Sandeep Ramachandruni, Yashaswi Verma, C V Jawahar</p>
+            </div>
+        </section>
+        
+        <section id="education" class="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <h3>Masters of Science (Research), Computer Science</h3>
+                <p><strong>Institution:</strong> International Institute of Information Technology, Hyderabad, India</p>
+                <p><strong>Graduation:</strong> April 2015</p>
+                <p><strong>Thesis Topic:</strong> Distinctive Parts for Relative Attributes</p>
+                <p><strong>Thesis Advisor:</strong> C V Jawahar</p>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to discussing new projects, innovative ideas, or opportunities to be part of your team.</p>
+            <p>Email: <a href="mailto:rnagasandeep@gmail.com">rnagasandeep@gmail.com</a></p>
+            <p>Phone: +1 732-347-5156</p>
+            <p>Location: Dallas, Texas</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/naga-sandeep-ramachandruni-b268525b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/rnsandeep44" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://gitlab.com/rnsandeep" target="_blank"><i class="fab fa-gitlab"></i></a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Naga Sandeep Ramachandruni. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
