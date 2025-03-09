@@ -27,8 +27,25 @@
         header {
             background-color: #3a5199;
             color: white;
-            padding: 40px 0;
-            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .header-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            padding-right: 140px; /* Make room for the profile pic */
+        }
+        
+        .header-content {
+            text-align: left;
+        }
+        
+        .profile-pic-container {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
         }
         
         .profile-pic {
@@ -37,7 +54,6 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid white;
-            margin-bottom: 10px;
         }
         
         h1 {
@@ -261,12 +277,23 @@
             }
             
             header {
-                padding: 30px 0;
+                padding: 120px 15px 30px;
             }
             
-            .profile-pic {
-                width: 120px;
-                height: 120px;
+            .header-wrapper {
+                padding-right: 0;
+                text-align: center;
+            }
+            
+            .header-content {
+                text-align: center;
+            }
+            
+            .profile-pic-container {
+                position: absolute;
+                right: 50%;
+                top: -90px;
+                transform: translateX(50%);
             }
             
             .job-header {
@@ -279,9 +306,15 @@
 </head>
 <body>
     <header>
-        <img src="images/proile.jpg" alt="Naga Sandeep Ramachandruni" class="profile-pic">
-        <h1>Naga Sandeep Ramachandruni</h1>
-        <p class="tagline">Computer Vision Expert | Deep Learning Specialist | Tech Lead</p>
+        <div class="header-wrapper">
+            <div class="header-content">
+                <h1>Naga Sandeep Ramachandruni</h1>
+                <p class="tagline">Computer Vision Expert | Deep Learning Specialist | Tech Lead</p>
+            </div>
+            <div class="profile-pic-container">
+                <img src="images/profile.jpg" alt="Naga Sandeep Ramachandruni" class="profile-pic">
+            </div>
+        </div>
     </header>
     
     <nav>
